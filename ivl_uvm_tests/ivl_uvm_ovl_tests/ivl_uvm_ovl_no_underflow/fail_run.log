@@ -1,0 +1,67 @@
+OVL_NOTE: V2.8: OVL_NO_UNDERFLOW initialized @ test.u_ovl_no_underflow.ovl_init_msg_t Severity: 1, Message: VIOLATION
+test.u_clk_100 FREQ_IN_MHZ = 100.000 MHz
+test.u_clk_100 PERIOD    = 10.000 ns
+VCD info: dumpfile fail_dump.vcd opened for output.
+Running ovl_no_underflow fail Test 
+
+Setting rest_n to 0 and giving  fail values for the test expresion 
+
+ovl_no_underflow does not fire at rst_n 
+
+Time=20 Current value 	 rst_n:0 test_expr :0100 
+
+Time=30 Current value 	 rst_n:0 test_expr :0011 
+
+Setting rest_n to 1 and giving  fail values for the test expresion 
+
+ovl_no_underflow only start evaluating  when the test_expression=100 
+
+ovl_no_underflow  fires if the following value of test_expression is  not in the range : (100 <= test_expr < 1100) 
+Time=40 Current value 	 rst_n:1 test_expr :0100 
+
+Time=50 Current value 	 rst_n:1 test_expr :0011 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : Test expression changed value from allowed minimum value min to a value in the range min-1 to max : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+Time=60 Current value 	 rst_n:1 test_expr :0100 
+
+Time=70 Current value 	 rst_n:1 test_expr :0010 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : Test expression changed value from allowed minimum value min to a value in the range min-1 to max : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+Time=80 Current value 	 rst_n:1 test_expr :0100 
+
+Time=90 Current value 	 rst_n:1 test_expr :0001 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : Test expression changed value from allowed minimum value min to a value in the range min-1 to max : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+Time=100 Current value 	 rst_n:1 test_expr :0100 
+
+Time=110 Current value 	 rst_n:1 test_expr :0000 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : Test expression changed value from allowed minimum value min to a value in the range min-1 to max : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+Time=130 Current value 	 rst_n:1 test_expr :0100 
+
+Time=140 Current value 	 rst_n:1 test_expr :1100 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : Test expression changed value from allowed minimum value min to a value in the range min-1 to max : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+Time=150 Current value 	 rst_n:1 test_expr :0100 
+
+Time=160 Current value 	 rst_n:1 test_expr :1101 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : Test expression changed value from allowed minimum value min to a value in the range min-1 to max : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+ovl_no_underflow  fires when test_expression contains X or Z
+Time=170 Current value 	 rst_n:1 test_expr :0z11 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : test_expr contains X or Z : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+Time=190 Current value 	 rst_n:1 test_expr :xx1x 
+
+C:/ivl_uvm/ivl_uvm_std_ovl//std_ovl_task.h : (40) 
+0 : OVL_ERROR : OVL_NO_UNDERFLOW : VIOLATION : test_expr contains X or Z : severity 1 : test.u_ovl_no_underflow.ovl_error_t
+ ovl_no_underflow fail Test ended 
+
+ivl_uvm_ovl_no_underflow_fail.sv:105: $finish called at 220000000 (1fs)
