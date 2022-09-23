@@ -1,0 +1,3 @@
+warning: Found both default and explicit timescale based delays. Use
+       : -Wtimescale to find the design element(s) with no explicit
+       : timescale.
