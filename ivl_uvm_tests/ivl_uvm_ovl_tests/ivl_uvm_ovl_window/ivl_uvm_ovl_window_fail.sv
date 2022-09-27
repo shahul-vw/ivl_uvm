@@ -5,7 +5,7 @@ module test;
    wire clk;
    reg rst_n;
    reg write,write_ack,bus_gnt;
-   int i;
+ 
    
 
    // simple signal check OVL 
@@ -36,7 +36,7 @@ module test;
   
      $display("Setting rest_n to 0 and giving  fail conditions \n");
      
-     $display("ovl_no_underflow does not fire at rst_n \n");
+     $display("ovl_window does not fire at rst_n \n");
      $monitor("Time=%0d Current value \t rst_n:%0d start_event: %b test_expr :%b  end_event: %b  \n", $time,rst_n,write,bus_gnt,write_ack);
      bus_gnt=1;
      event_start();
