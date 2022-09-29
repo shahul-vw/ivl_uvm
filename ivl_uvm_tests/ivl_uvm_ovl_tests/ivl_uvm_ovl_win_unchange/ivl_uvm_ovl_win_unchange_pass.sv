@@ -20,7 +20,7 @@ module test;
 
    initial begin
       // Dump waves
-      $dumpfile("fail_dump.vcd");
+	   $dumpfile("pass_dump.vcd");
       $dumpvars(1, test);
       
       // Initialize values.
